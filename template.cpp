@@ -27,6 +27,7 @@ void printVector(const std::vector<T> &data)
     copy(ALL(data) - 1, out_it);
     ss << data.back() << "]";
     cout << ss.str() << endl;
+    return;
 }
 
 int main()
