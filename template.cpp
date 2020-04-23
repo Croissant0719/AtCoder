@@ -10,6 +10,7 @@ typedef long long ll;
 #define ALL(x) (x).begin(),(x).end()
 #define SIZE(x) ((ll)(x).size())
 #define MAX(x) *max_element(ALL(x))
+#define SUM(x) accumulate(ALL(x), 0)
 #define INF 1000000000000
 #define MOD 10000007
 #define PB push_back
