@@ -23,18 +23,18 @@ int main()
 {
   ll N; cin >> N;
   vector<ll> A(N);
-  REP(i, N) cin >> A.at(i);
+  REP(i, N) cin >> A[i];
+
+  map <ll, ll> x;
+  REP(i, N) x[i + A[i]]++;
 
   ll cnt = 0;
-  for (ll i = N - 1; 0 <= i; i--) {
-    for (ll j = N - 1; 0 <= j; j--) {
-      if (i <= j) continue;
-      ll tmp = i - j;
-      if (A.at(i) + A.at(j) == tmp) {
-        cnt++;
-      }
+  REP(i, N) {
+    if (x[i - A[i]] > 0) {
+      cnt += x[i - A[i]];
     }
   }
+
   cout << cnt << endl;
   return 0;
 }
