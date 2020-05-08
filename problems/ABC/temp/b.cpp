@@ -18,6 +18,7 @@ typedef long long ll;
 #define F first
 #define S second
 #define MAXR 100000
+#define PI acos(-1.0)
 
 int main()
 {
